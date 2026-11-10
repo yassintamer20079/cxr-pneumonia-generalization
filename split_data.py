@@ -26,3 +26,13 @@ for path, label in images:
     patient_ids.add(get_patient_id(path.name))
 
 print(len(patient_ids))
+# each patient -> list of their images
+patients = {}
+
+for path, label in images:
+    pid = get_patient_id(path.name)
+    if pid not in patients:
+        patients[pid] = []
+    patients[pid].append((path, label))
+print(len(patients))
+
