@@ -1,5 +1,7 @@
 from pathlib import Path
 
+# count how many X-rays are in each folder
+
 data_dir = Path("data/kermany")
 
 for split in ["train", "val", "test"]:
