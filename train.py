@@ -1,54 +1,16 @@
-import csv
-from PIL import Image                                # opens image files
-from torchvision import transforms                   # ready-made image steps
-from torch.utils.data import Dataset, DataLoader     # PyTorch's data tools
-from torchvision import models
-from torch import nn
 import torch
+from torch import nn
+from torch.utils.data import DataLoader
+from torchvision import models
 from sklearn.metrics import roc_auc_score
 
-# read the split file -> list of rows (dictionaries) for one set
-def load_split(split_name):
-    rows = []
-    with open("kermany_split.csv", newline="") as f:
-        reader = csv.DictReader(f)                   # each line -> {'path', 'label', 'split'}
-        for row in reader:
-            if row["split"] == split_name:
-                rows.append(row)
-    return rows
+from data import load_split, transform, XrayDataset    # shared data code (data.py)
+
 
 train_rows = load_split("train")
 val_rows = load_split("val")
 test_rows = load_split("test")
 print(len(train_rows), len(val_rows), len(test_rows))   # check: 4171 779 906
-
-
-# recipe applied to every X-ray -> the input format ResNet-18 was trained on
-transform = transforms.Compose([
-    transforms.Grayscale(num_output_channels=3),     # gray copied into 3 channels (R = G = B)
-    transforms.Resize((224, 224)),                   # same size for every image
-    transforms.ToTensor(),                           # PIL image -> tensor (3, 224, 224), values 0-1
-    transforms.Normalize([0.485, 0.456, 0.406],      # ImageNet mean per channel
-                         [0.229, 0.224, 0.225]),     # ImageNet std per channel
-])
-
-
-# list-like object: dataset[i] -> (ready image tensor, label 1.0 / 0.0)
-class XrayDataset(Dataset):
-    def __init__(self, rows, transform):
-        self.rows = rows                             # keep the list of rows
-        self.transform = transform                   # keep the recipe
-
-    def __len__(self):
-        return len(self.rows)                        # number of images -> len(dataset)
-
-    def __getitem__(self, i):
-        row = self.rows[i]
-        image = Image.open(row["path"])              # open only this image, only when asked
-        x = self.transform(image)
-        y = 1.0 if row["label"] == "PNEUMONIA" else 0.0   # word -> number for the loss
-        return x, y
-
 
 # one dataset per set, same blueprint and same recipe
 train_dataset = XrayDataset(train_rows, transform)
@@ -63,9 +25,11 @@ val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 # check: number of batches -> 131 train, 25 val
 print(len(train_loader), len(val_loader))
 
+# pretrained ResNet-18, last layer replaced: 512 features -> 1 score (pneumonia)
 model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
 model.fc = nn.Linear(512, 1)
 
+# Mac GPU if available, otherwise CPU
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 model = model.to(device)
 
@@ -80,6 +44,7 @@ n_neg = len(train_rows) - n_pos
 pos_weight = torch.tensor([n_neg / n_pos], device=device)
 print(n_pos, n_neg, pos_weight)
 
+# weighted binary cross-entropy (sigmoid included)
 loss_fn = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
 
 # optimizer: nudges all the weights to reduce the loss (lr = step size)
