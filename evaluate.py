@@ -64,3 +64,9 @@ test_probs, test_labels = predict(load_split("test"))
 test_auc = roc_auc_score(test_labels, test_probs)
 test_sens, test_spec = sens_spec(test_probs, test_labels, threshold)
 print(f"Kermany test: AUC {test_auc:.4f}, sensitivity {test_sens:.4f}, specificity {test_spec:.4f}")
+
+# RSNA test (other hospitals, adults): same model, same threshold frozen from Kermany val
+rsna_probs, rsna_labels = predict(load_split("test", "rsna_split.csv"))
+rsna_auc = roc_auc_score(rsna_labels, rsna_probs)
+rsna_sens, rsna_spec = sens_spec(rsna_probs, rsna_labels, threshold)
+print(f"RSNA test: AUC {rsna_auc:.4f}, sensitivity {rsna_sens:.4f}, specificity {rsna_spec:.4f}")
