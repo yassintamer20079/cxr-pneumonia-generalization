@@ -49,6 +49,16 @@ Kermany's original split has only 16 validation images and puts some patients' X
 
 Per-run numbers are in `exp2_results.csv`, and per-epoch validation AUCs in `exp2_log.txt`.
 
+## Where does the model look? (Grad-CAM)
+
+Grad-CAM heatmaps for the Kermany model (Experiment 1), on the 2 most confident test images of each group (`gradcam.py`). Red = regions that pushed the score towards "pneumonia".
+
+<img src="figures/gradcam_examples.png" width="450">
+
+- **Pneumonia cases (both datasets):** the heat falls mostly on the lung fields.
+- **RSNA false alarms (healthy adults flagged with p ≈ 1.00):** the heat concentrates on the upper chest and shoulder region, and in one image on the "R" laterality marker in the corner. This hints that part of the false alarms may come from features that are not lung disease (markers, adult anatomy, portable-scan artefacts).
+- **Caution:** these are 8 hand-picked examples, so they suggest hypotheses rather than prove them. Each heatmap is scaled to its own maximum, so for confidently cleared images (p ≈ 0.00) the map carries almost no information.
+
 ## Limitations
 
 - **The shift has several causes at once.** Kermany vs RSNA differs in patient age, country, hospital, scanners and label definition (a pneumonia diagnosis vs radiologist-marked lung opacity). This project measures the combined effect and cannot say which factor drives the drop.
@@ -59,7 +69,7 @@ Per-run numbers are in `exp2_results.csv`, and per-epoch validation AUCs in `exp
 
 ## Next steps
 
-- **Grad-CAM** heatmaps, to check whether the model looks at the lungs or at shortcuts such as text markers and image borders.
+- **Test the marker hypothesis from Grad-CAM:** mask laterality markers and text on RSNA images and check whether the false-alarm rate drops.
 - **Using the unlabelled RSNA images.** In the 1% runs, about 10,300 RSNA training images go unused. Semi-supervised fine-tuning could use them.
 - A realistic low-label protocol, with a validation set sized to the label budget.
 
@@ -78,6 +88,7 @@ python prepare_rsna.py    # RSNA: DICOM -> PNG, split -> rsna_split.csv
 python evaluate.py        # Experiment 1
 python finetune.py        # Experiment 2 (18 runs, ~2 h on an Apple M4 Pro)
 python plot_results.py    # -> figures/auc_vs_labels.png
+python gradcam.py         # -> figures/gradcam_examples.png
 ```
 
 ## Repository structure
@@ -92,6 +103,7 @@ python plot_results.py    # -> figures/auc_vs_labels.png
 | `prepare_rsna.py` | RSNA class selection, DICOM to PNG conversion, split             |
 | `finetune.py`     | Experiment 2                                                     |
 | `plot_results.py` | Results figure                                                   |
+| `gradcam.py`      | Grad-CAM heatmaps for example test images                        |
 
 ## References
 
