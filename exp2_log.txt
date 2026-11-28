@@ -1,0 +1,307 @@
+10404 2229 2230
+kermany 0.01 0
+  epoch 1: val AUC 0.9455
+  epoch 2: val AUC 0.9444
+  epoch 3: val AUC 0.9466
+  epoch 4: val AUC 0.9483
+  epoch 5: val AUC 0.9477
+  epoch 6: val AUC 0.9465
+  epoch 7: val AUC 0.9470
+  epoch 8: val AUC 0.9480
+  epoch 9: val AUC 0.9489
+  epoch 10: val AUC 0.9497
+  epoch 11: val AUC 0.9497
+  epoch 12: val AUC 0.9497
+  epoch 13: val AUC 0.9501
+  epoch 14: val AUC 0.9502
+  epoch 15: val AUC 0.9509
+  epoch 16: val AUC 0.9516
+  epoch 17: val AUC 0.9523
+  epoch 18: val AUC 0.9525
+  epoch 19: val AUC 0.9527
+  epoch 20: val AUC 0.9531
+  epoch 21: val AUC 0.9532
+  epoch 22: val AUC 0.9534
+  epoch 23: val AUC 0.9536
+  epoch 24: val AUC 0.9538
+  epoch 25: val AUC 0.9539
+  epoch 26: val AUC 0.9540
+  epoch 27: val AUC 0.9542
+  epoch 28: val AUC 0.9543
+  epoch 29: val AUC 0.9542
+  epoch 30: val AUC 0.9546
+  test AUC 0.9585, sensitivity 0.9527, specificity 0.7888
+kermany 0.01 1
+  epoch 1: val AUC 0.9407
+  epoch 2: val AUC 0.9305
+  epoch 3: val AUC 0.9341
+  epoch 4: val AUC 0.9374
+  epoch 5: val AUC 0.9397
+  epoch 6: val AUC 0.9410
+  epoch 7: val AUC 0.9433
+  epoch 8: val AUC 0.9452
+  epoch 9: val AUC 0.9448
+  epoch 10: val AUC 0.9458
+  epoch 11: val AUC 0.9467
+  epoch 12: val AUC 0.9471
+  epoch 13: val AUC 0.9468
+  epoch 14: val AUC 0.9462
+  epoch 15: val AUC 0.9455
+  epoch 16: val AUC 0.9455
+  epoch 17: val AUC 0.9469
+  epoch 18: val AUC 0.9484
+  epoch 19: val AUC 0.9500
+  epoch 20: val AUC 0.9509
+  epoch 21: val AUC 0.9518
+  epoch 22: val AUC 0.9517
+  epoch 23: val AUC 0.9444
+  epoch 24: val AUC 0.9374
+  epoch 25: val AUC 0.9330
+  epoch 26: val AUC 0.9312
+  epoch 27: val AUC 0.9320
+  epoch 28: val AUC 0.9332
+  epoch 29: val AUC 0.9350
+  epoch 30: val AUC 0.9378
+  test AUC 0.9533, sensitivity 0.9483, specificity 0.7464
+kermany 0.01 2
+  epoch 1: val AUC 0.9476
+  epoch 2: val AUC 0.9450
+  epoch 3: val AUC 0.9491
+  epoch 4: val AUC 0.9510
+  epoch 5: val AUC 0.9521
+  epoch 6: val AUC 0.9526
+  epoch 7: val AUC 0.9536
+  epoch 8: val AUC 0.9540
+  epoch 9: val AUC 0.9543
+  epoch 10: val AUC 0.9546
+  epoch 11: val AUC 0.9546
+  epoch 12: val AUC 0.9545
+  epoch 13: val AUC 0.9549
+  epoch 14: val AUC 0.9540
+  epoch 15: val AUC 0.9499
+  epoch 16: val AUC 0.9484
+  epoch 17: val AUC 0.9493
+  epoch 18: val AUC 0.9503
+  epoch 19: val AUC 0.9508
+  epoch 20: val AUC 0.9515
+  epoch 21: val AUC 0.9516
+  epoch 22: val AUC 0.9518
+  epoch 23: val AUC 0.9518
+  epoch 24: val AUC 0.9523
+  epoch 25: val AUC 0.9523
+  epoch 26: val AUC 0.9526
+  epoch 27: val AUC 0.9528
+  epoch 28: val AUC 0.9529
+  epoch 29: val AUC 0.9533
+  epoch 30: val AUC 0.9533
+  test AUC 0.9652, sensitivity 0.9681, specificity 0.7479
+kermany 0.1 0
+  epoch 1: val AUC 0.9643
+  epoch 2: val AUC 0.9724
+  epoch 3: val AUC 0.9696
+  epoch 4: val AUC 0.9688
+  epoch 5: val AUC 0.9668
+  epoch 6: val AUC 0.9696
+  epoch 7: val AUC 0.9716
+  epoch 8: val AUC 0.9719
+  epoch 9: val AUC 0.9719
+  epoch 10: val AUC 0.9725
+  test AUC 0.9754, sensitivity 0.9593, specificity 0.8690
+kermany 0.1 1
+  epoch 1: val AUC 0.9553
+  epoch 2: val AUC 0.9644
+  epoch 3: val AUC 0.9625
+  epoch 4: val AUC 0.9664
+  epoch 5: val AUC 0.9633
+  epoch 6: val AUC 0.9645
+  epoch 7: val AUC 0.9644
+  epoch 8: val AUC 0.9653
+  epoch 9: val AUC 0.9637
+  epoch 10: val AUC 0.9649
+  test AUC 0.9732, sensitivity 0.9560, specificity 0.8410
+kermany 0.1 2
+  epoch 1: val AUC 0.9631
+  epoch 2: val AUC 0.9682
+  epoch 3: val AUC 0.9678
+  epoch 4: val AUC 0.9721
+  epoch 5: val AUC 0.9710
+  epoch 6: val AUC 0.9705
+  epoch 7: val AUC 0.9700
+  epoch 8: val AUC 0.9707
+  epoch 9: val AUC 0.9701
+  epoch 10: val AUC 0.9706
+  test AUC 0.9728, sensitivity 0.9560, specificity 0.8478
+kermany 1.0 0
+  epoch 1: val AUC 0.9778
+  epoch 2: val AUC 0.9791
+  epoch 3: val AUC 0.9758
+  epoch 4: val AUC 0.9732
+  epoch 5: val AUC 0.9761
+  test AUC 0.9842, sensitivity 0.9615, specificity 0.8986
+kermany 1.0 1
+  epoch 1: val AUC 0.9780
+  epoch 2: val AUC 0.9770
+  epoch 3: val AUC 0.9773
+  epoch 4: val AUC 0.9740
+  epoch 5: val AUC 0.9742
+  test AUC 0.9829, sensitivity 0.9549, specificity 0.9008
+kermany 1.0 2
+  epoch 1: val AUC 0.9776
+  epoch 2: val AUC 0.9756
+  epoch 3: val AUC 0.9706
+  epoch 4: val AUC 0.9768
+  epoch 5: val AUC 0.9770
+  test AUC 0.9851, sensitivity 0.9571, specificity 0.9039
+imagenet 0.01 0
+  epoch 1: val AUC 0.9052
+  epoch 2: val AUC 0.9127
+  epoch 3: val AUC 0.9152
+  epoch 4: val AUC 0.9141
+  epoch 5: val AUC 0.9141
+  epoch 6: val AUC 0.9136
+  epoch 7: val AUC 0.9143
+  epoch 8: val AUC 0.9156
+  epoch 9: val AUC 0.9176
+  epoch 10: val AUC 0.9201
+  epoch 11: val AUC 0.9186
+  epoch 12: val AUC 0.9179
+  epoch 13: val AUC 0.9203
+  epoch 14: val AUC 0.9238
+  epoch 15: val AUC 0.9279
+  epoch 16: val AUC 0.9314
+  epoch 17: val AUC 0.9342
+  epoch 18: val AUC 0.9356
+  epoch 19: val AUC 0.9363
+  epoch 20: val AUC 0.9374
+  epoch 21: val AUC 0.9377
+  epoch 22: val AUC 0.9380
+  epoch 23: val AUC 0.9385
+  epoch 24: val AUC 0.9387
+  epoch 25: val AUC 0.9387
+  epoch 26: val AUC 0.9389
+  epoch 27: val AUC 0.9389
+  epoch 28: val AUC 0.9395
+  epoch 29: val AUC 0.9385
+  epoch 30: val AUC 0.9359
+  test AUC 0.9420, sensitivity 0.9571, specificity 0.6866
+imagenet 0.01 1
+  epoch 1: val AUC 0.8822
+  epoch 2: val AUC 0.9011
+  epoch 3: val AUC 0.9046
+  epoch 4: val AUC 0.9078
+  epoch 5: val AUC 0.9070
+  epoch 6: val AUC 0.9039
+  epoch 7: val AUC 0.9031
+  epoch 8: val AUC 0.8985
+  epoch 9: val AUC 0.8953
+  epoch 10: val AUC 0.8970
+  epoch 11: val AUC 0.9059
+  epoch 12: val AUC 0.9122
+  epoch 13: val AUC 0.9152
+  epoch 14: val AUC 0.9174
+  epoch 15: val AUC 0.9189
+  epoch 16: val AUC 0.9231
+  epoch 17: val AUC 0.9288
+  epoch 18: val AUC 0.9301
+  epoch 19: val AUC 0.9311
+  epoch 20: val AUC 0.9330
+  epoch 21: val AUC 0.9343
+  epoch 22: val AUC 0.9389
+  epoch 23: val AUC 0.9387
+  epoch 24: val AUC 0.9359
+  epoch 25: val AUC 0.9317
+  epoch 26: val AUC 0.9280
+  epoch 27: val AUC 0.9263
+  epoch 28: val AUC 0.9256
+  epoch 29: val AUC 0.9274
+  epoch 30: val AUC 0.9261
+  test AUC 0.9365, sensitivity 0.9505, specificity 0.6775
+imagenet 0.01 2
+  epoch 1: val AUC 0.9107
+  epoch 2: val AUC 0.9281
+  epoch 3: val AUC 0.9360
+  epoch 4: val AUC 0.9369
+  epoch 5: val AUC 0.9381
+  epoch 6: val AUC 0.9386
+  epoch 7: val AUC 0.9389
+  epoch 8: val AUC 0.9385
+  epoch 9: val AUC 0.9379
+  epoch 10: val AUC 0.9373
+  epoch 11: val AUC 0.9386
+  epoch 12: val AUC 0.9396
+  epoch 13: val AUC 0.9370
+  epoch 14: val AUC 0.9170
+  epoch 15: val AUC 0.9125
+  epoch 16: val AUC 0.9174
+  epoch 17: val AUC 0.9295
+  epoch 18: val AUC 0.9338
+  epoch 19: val AUC 0.9359
+  epoch 20: val AUC 0.9372
+  epoch 21: val AUC 0.9381
+  epoch 22: val AUC 0.9390
+  epoch 23: val AUC 0.9397
+  epoch 24: val AUC 0.9403
+  epoch 25: val AUC 0.9405
+  epoch 26: val AUC 0.9405
+  epoch 27: val AUC 0.9405
+  epoch 28: val AUC 0.9414
+  epoch 29: val AUC 0.9248
+  epoch 30: val AUC 0.9044
+  test AUC 0.9467, sensitivity 0.9516, specificity 0.7192
+imagenet 0.1 0
+  epoch 1: val AUC 0.9614
+  epoch 2: val AUC 0.9673
+  epoch 3: val AUC 0.9652
+  epoch 4: val AUC 0.9675
+  epoch 5: val AUC 0.9642
+  epoch 6: val AUC 0.9635
+  epoch 7: val AUC 0.9659
+  epoch 8: val AUC 0.9685
+  epoch 9: val AUC 0.9697
+  epoch 10: val AUC 0.9701
+  test AUC 0.9742, sensitivity 0.9648, specificity 0.8282
+imagenet 0.1 1
+  epoch 1: val AUC 0.9534
+  epoch 2: val AUC 0.9563
+  epoch 3: val AUC 0.9578
+  epoch 4: val AUC 0.9586
+  epoch 5: val AUC 0.9588
+  epoch 6: val AUC 0.9625
+  epoch 7: val AUC 0.9628
+  epoch 8: val AUC 0.9619
+  epoch 9: val AUC 0.9586
+  epoch 10: val AUC 0.9603
+  test AUC 0.9685, sensitivity 0.9648, specificity 0.7888
+imagenet 0.1 2
+  epoch 1: val AUC 0.9605
+  epoch 2: val AUC 0.9556
+  epoch 3: val AUC 0.9666
+  epoch 4: val AUC 0.9672
+  epoch 5: val AUC 0.9682
+  epoch 6: val AUC 0.9689
+  epoch 7: val AUC 0.9683
+  epoch 8: val AUC 0.9700
+  epoch 9: val AUC 0.9699
+  epoch 10: val AUC 0.9698
+  test AUC 0.9726, sensitivity 0.9560, specificity 0.8547
+imagenet 1.0 0
+  epoch 1: val AUC 0.9765
+  epoch 2: val AUC 0.9800
+  epoch 3: val AUC 0.9730
+  epoch 4: val AUC 0.9756
+  epoch 5: val AUC 0.9751
+  test AUC 0.9847, sensitivity 0.9615, specificity 0.9031
+imagenet 1.0 1
+  epoch 1: val AUC 0.9780
+  epoch 2: val AUC 0.9768
+  epoch 3: val AUC 0.9768
+  epoch 4: val AUC 0.9740
+  epoch 5: val AUC 0.9769
+  test AUC 0.9816, sensitivity 0.9615, specificity 0.8827
+imagenet 1.0 2
+  epoch 1: val AUC 0.9777
+  epoch 2: val AUC 0.9772
+  epoch 3: val AUC 0.9682
+  epoch 4: val AUC 0.9787
+  epoch 5: val AUC 0.9780
+  test AUC 0.9831, sensitivity 0.9615, specificity 0.8970
